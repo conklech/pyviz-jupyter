@@ -1,2 +1,3 @@
-FROM jupyter/scipy-notebook:7f1482f5a136
-RUN pip install hvplot datashader panel
+FROM jupyter/scipy-notebook:4cdbc9cdb7d1 
+RUN conda install --quiet --yes \
+  hvplot datashader panel
