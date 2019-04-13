@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  jupyter:
+    build: .
+    #image: jupyter/scipy-notebook:7f1482f5a136
+    ports:
+     - "8889:8888"
+    volumes:
+     - ./:/home/jovyan/work 
+    command: start-notebook.sh --NotebookApp.custom_display_url=http://localhost:8889
