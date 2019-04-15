@@ -1,3 +1,2 @@
-FROM jupyter/scipy-notebook:4cdbc9cdb7d1 
-RUN conda install --quiet --yes \
-  hvplot datashader panel
+FROM jupyter/minimal-notebook:4cdbc9cdb7d1 
+RUN conda install -c pyviz holoviews bokeh scipy datashader --yes
