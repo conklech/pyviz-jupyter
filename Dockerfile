@@ -1,5 +1,5 @@
 FROM jupyter/minimal-notebook:4cdbc9cdb7d1 
-RUN conda install -c pyviz holoviews bokeh scipy datashader ipywidgets seaborn --yes && \
+RUN conda install -c pyviz holoviews bokeh scipy datashader ipywidgets seaborn selenium phantomjs pillow --yes && \
     conda remove --quiet --yes --force qt pyqt && \
     conda clean -tipsy && \
     jupyter nbextension enable --py widgetsnbextension --sys-prefix && \
